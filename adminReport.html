@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineShoppingApp</title>
+    <link rel="stylesheet" href="adminReportStyles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="inventory-container">
+        <div class="header">
+            <img src="media/logo.png" alt="Logo" class="logo"> 
+            <h2 class="title">Generate Report</h2>
+            <h1 class="home-button" onclick="window.location.href='adminFirstPage.html'">🏠</h1> <!-- Home Button with Unicode -->
+        </div>
+       
+        <div class="dropdown-container">
+            <select id="customerReportDropdown" class="dropdown" onchange="disableOthers('customerReportDropdown')" onclick="enableAllDropdowns()">
+                <option value="" disabled selected>Select Customer Report</option>
+                <option value="customer">All Customer</option>
+                <option value="cashPurchase">Cash Purchases</option>
+                <option value="creditPurchase">Credit Purchases</option>
+            </select>
+            
+            <select id="inventoryReportDropdown" class="dropdown" onchange="disableOthers('inventoryReportDropdown')" onclick="enableAllDropdowns()">
+                <option value="" disabled selected>Select Inventory Report</option>
+                <option value="allProducts">All Products</option>
+                <option value="highStocks">High Stocks</option>
+                <option value="lowStocks">Low Stocks</option>
+            </select>
+            
+            <select id="salesReportDropdown" class="dropdown" onchange="disableOthers('salesReportDropdown')" onclick="enableAllDropdowns()">
+                <option value="" disabled selected>Select Sales Report</option>
+                <option value="sales">Sales Report</option>
+                <option value="allSales">All Sales</option>
+                <option value="topSelling">Top Selling Products</option>
+            </select>
+        </div>
+
+        <button class="btn" id="generateReportButton" onclick="generateReport()">Generate Report</button>
+    </div>
+    
+    <script src="adminReportJavaScript.js"></script>
+</body>
+</html>

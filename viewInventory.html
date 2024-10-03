@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Inventory</title>
+    <link rel="stylesheet" href="viewInventoryStyles.css">
+</head>
+<body>
+    <div class="header">
+        <img src="media/logo.png" alt="Logo" class="logo">
+        <h1 class="title">View Inventory</h1>
+        <div class="home-icon" onclick="goHome()">🏠</div>
+    </div>
+
+    <main>
+        <div class="filter-options">
+            <label>
+                <input type="radio" name="viewOption" value="viewByCategory" id="viewByCategory"> View by Category Name
+            </label>
+            <label>
+                <input type="radio" name="viewOption" value="viewByProduct" id="viewByProduct"> View by Product Name
+            </label>
+            <label>
+                <input type="radio" name="viewOption" value="viewAll" id="viewAll"> View All
+            </label>
+        </div>
+
+        <div class="search-container" id="searchContainer">
+            <label for="searchInput">Enter product or category name:</label>
+            <input type="text" id="searchInput" placeholder="Search here...">
+            <button onclick="searchProducts()">Search</button>
+        </div>
+
+        <hr class="divider">
+
+        <div id="productGrid" class="product-grid">
+            <!-- Dynamically populate products here -->
+        </div>
+        
+    </main>
+
+    <script src="viewInventoryJavaScript.js"></script>
+</body>
+</html>

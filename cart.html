@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineShoppingApp</title>
+    <link rel="stylesheet" href="cartStyles.css">
+</head>
+<body>
+    <div class="header">
+        <img src="media/logo.png" alt="Logo" class="logo">
+        <h1 class="title">Your Cart</h1>
+        <div class="icons">
+            <div class="home-icon" onclick="goHome()">🏠</div>
+            <div class="profile-icon" onclick="goToProfile()">👤</div>
+            <div class="cart-icon" onclick="goToCart()">🛒</div>
+        </div>
+    </div>
+
+    <div class="header">
+        <div class="productCount">Total Products:<p class="totalProducts" id="totalproducts"></p></div>
+        <div><button id="proceedToBuyBtn" class="btn" onclick="proceedToBuy()">Proceed to Buy</button></div>
+    </div>
+
+    <main>
+        <div id="productGrid" class="product-grid">
+            <!-- Dynamically populate products here -->
+        </div>  
+    </main>
+
+     <!-- Modal for Forgot Password -->
+     <div id="modifyQuantityModal" class="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Modify Quantity</h2>
+        <div class="input-container">
+            <label for="quntity">Enter Quantity:</label>
+            <input type="number" id="quantity" placeholder="Enter Quantity" required>
+        </div>
+        <button id="submitQuantityBtn" class="btn">Submit</button>
+        </div>
+    </div> 
+
+    <script src="cartJavaScript.js"></script>
+</body>
+</html>

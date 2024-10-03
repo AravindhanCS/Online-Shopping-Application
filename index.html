@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="signInStyles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="title">LOGIN</h1>
+
+    <form id="loginForm">
+      <div class="input-container">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="input-container">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+
+      <div class="button-container">
+        <button type="submit" class="btn">Login</button>
+        
+      </div>
+
+      <div class="signin-link">
+        <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+      </div>
+      <div class="signin-link"><a href="signUp.html"  id="signUpButton">Sign Up</a></div>
+      <div id="message" class="signin-link"></div>
+    </form>
+  </div>
+
+  <!-- Modal for Forgot Password -->
+  <div id="forgotPasswordModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Reset Password</h2>
+      <div class="input-container">
+        <label for="forgotEmail">Enter your email:</label>
+        <input type="email" id="forgotEmail" required>
+      </div>
+      
+      
+      <button id="resetPasswordBtn" class="btn">Reset Password</button>
+    </div>
+  </div>
+
+  <script src="signInJavaScript.js"></script> <!-- Link to your JS file -->
+</body>
+</html>

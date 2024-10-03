@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Product Info</title>
+    <link rel="stylesheet" href="updateInventoryStyles.css">
+</head>
+<body>
+    <!-- Header with logo and home button -->
+    <div class="header">
+        <img src="media/logo.png" alt="Logo" class="logo">
+        <h1 class="title">Update Product Info</h1>
+        <div class="home-icon" onclick="goHome()">🏠</div>
+    </div>
+
+    <!-- Search Section -->
+    <main>
+        <!-- Search box and title -->
+        <div class="search-container">
+            <label for="productSearchInput" class="search-label">Product Name:</label>
+            <div class="search-box">
+                <input type="text" id="productSearchInput" placeholder="Enter product name">
+                <button onclick="searchProduct()">Search</button>
+            </div>
+        </div>
+        
+        <div id="productGrid" class="product-grid"></div>
+            <!-- Dynamically populate products here -->
+        </div>
+
+        <!-- Update Form Section -->
+        <div id="updateFormContainer" class="update-form" style="display: none;">
+            <h2>Update Product Details</h2>
+            <input type="text" id="title" placeholder="Title">
+            <input type="text" id="category" placeholder="Category Name">
+            <input type="number" id="quantity" placeholder="Quantity" min="0">
+            <input type="number" id="price" placeholder="Price" min="0">
+            <label for="isAvailable">Is Available:</label>
+            <select id="isAvailable">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+            <textarea id="description" placeholder="Description"></textarea>
+
+            <div id="imageSection" style="display: none;">
+                <img id="productImage" src="" alt="Product Image">
+                <p>Do you want to update the image?</p>
+                <input type="file" id="imageInput">
+            </div>
+
+            <button onclick="updateProduct()">Update</button>
+        </div>
+    </main>
+
+    <script src="updateInventoryJavaScript.js"></script>
+</body>
+</html>

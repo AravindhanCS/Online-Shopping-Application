@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineShoppingApp</title>
+    <link rel="stylesheet" href="customerFirstPageStyles.css">
+</head>
+<body>
+    <div class="header">
+        <img src="media/logo.png" alt="Logo" class="logo">
+        <h1 class="title">Welcome</h1>
+        <div class="icons">
+            <div class="home-icon" onclick="goToProfile()">👤</div>
+            <div class="cart-icon" onclick="goToCart()">🛒</div>
+        </div>
+    </div>
+
+    <main>
+        <div class="filter-options">
+            <label>
+                <input type="radio" name="viewOption" value="viewByProduct" id="viewByProduct"> View by Product Name
+            </label>
+            <label>
+                <input type="radio" name="viewOption" value="viewByCategory" id="viewByCategory" > View by Category Name
+            </label>
+            
+            <label>
+                <input type="radio" name="viewOption" value="viewAll" id="viewAll" checked> View All
+            </label>
+        </div>
+        <div class="search-container" id="searchContainer">
+            <label for="searchInput">Enter product or category name:</label>
+            <input type="text" id="searchInput" placeholder="Search here...">
+            <button onclick="searchProducts()">Search</button>
+        </div>
+
+        <hr class="divider">
+
+        <div id="productGrid" class="product-grid">
+            <!-- Dynamically populate products here -->
+        </div>  
+    </main>
+
+     <!-- Modal for Forgot Password -->
+     <div id="addToCartModal" class="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Add Quantity</h2>
+        <div class="input-container">
+            <label for="quntity">Enter Quantity:</label>
+            <input type="number" id="quantity" placeholder="Enter Quantity"  required>
+        </div>
+        <button id="submitQuantityBtn" class="btn">Submit</button>
+        </div>
+    </div>
+
+    <!-- Modal for Forgot Password -->
+    <div id="buyNowModal" class="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Add Quantity</h2>
+        <div class="input-container">
+            <label for="quntity">Enter Quantity:</label>
+            <input type="number" id="buyQuantity" placeholder="Enter Quantity"  required>
+        </div>
+        <button id="submitBuyQuantityBtn" class="btn">Submit</button>
+        </div>
+    </div>
+
+    <script src="customerFirstPageJavaScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineShoppingApp</title>
+    <link rel="stylesheet" href="customerProfileStyles.css">
+</head>
+<body>
+    <!-- First Header Section (No Changes) -->
+    <div class="header">
+        <img src="media/logo.png" alt="Logo" class="logo">
+        <h1 class="title">Welcome</h1>
+        <div class="icons">
+            <div class="home-icon" onclick="goHome()">🏠</div>
+            <div class="home-icon" onclick="goToProfile()">👤</div>
+            <div class="cart-icon" onclick="goToCart()">🛒</div>
+            <button class="btn logout-btn" onclick="logOut()">Log Out</button>
+        </div>
+    </div>
+
+    <!-- Second Header Section for Customer Info -->
+    <main>
+        <div class="customer-info-header">
+            <div>
+                <p>Name: <span class="customer-name" id="customer-name"></span></p>
+            </div>
+            <div>
+                <p>Credit Points: <span class="creditpoints" id="creditpoints"></span></p>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Purchase History Section -->
+        <h2 class="section-heading">Purchase History</h2>
+
+        <div id="productGrid" class="product-grid">
+            <!-- Dynamically populate products here -->
+        </div>
+    </main>
+
+    <script src="customerProfileJavaScript.js"></script>
+</body>
+</html>
